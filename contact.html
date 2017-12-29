@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <form name="emailForm" action="https://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl" method="get">
+        <input type="hidden" name="recipient" value="admin@robbiethandi.me">
+        <input type="hidden" name="subject" value="robbiethandi.me contact form">
+
+        <div class="input">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="input">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" required>
+        </div>
+        <div class="input">
+            <label for="content">Content</label>
+            <input type="text" name="content" id="content" required>
+        </div>
+
+        <button type="submit" value="submit" id="submit">Send</button>
+    </form>
+</body>
