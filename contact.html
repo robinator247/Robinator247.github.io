@@ -6,24 +6,34 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <!--TODO: Add form mail server when it has been made-->
-    <form name="emailForm" action="" method="get">
-        <input type="hidden" name="recipient" value="admin@robbiethandi.me">
-        <input type="hidden" name="subject" value="robbiethandi.me contact form">
+    <header>
+        <a id="homeButton" href="index.html">Robbie Thandi</a>
+    </header>
+    <main>
+        <!--&lt;!&ndash;TODO: Add form mail server when it has been made&ndash;&gt;-->
+        <!--<form name="emailForm" action="mailto:admin@robbiethandi.me?Subject=Contact%20Form" method="post" enctype="text/plain">-->
+            <!--<div class="input">-->
+                <!--<label for="name">Name</label>-->
+                <!--<input type="text" name="name" id="name" size="20" required>-->
+            <!--</div>-->
+            <!--<div class="input">-->
+                <!--<label for="email">Email</label>-->
+                <!--<input type="text" name="email" id="email" size="40" required>-->
+            <!--</div>-->
+            <!--<div class="input">-->
+                <!--<label for="content">Content</label>-->
+                <!--<input type="text" name="content" id="content" size="400" required>-->
+            <!--</div>-->
 
-        <div class="input">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required>
-        </div>
-        <div class="input">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" required>
-        </div>
-        <div class="input">
-            <label for="content">Content</label>
-            <input type="text" name="content" id="content" required>
-        </div>
+            <!--<button type="submit" value="submit" id="submit">Send</button>-->
+        <!--</form>-->
 
-        <button type="submit" value="submit" id="submit">Send</button>
-    </form>
+        <!--Temporary workaround till server is set up-->
+        <br> <br>
+        <a href="mailto:admin@robbiethandi.me?subject=robbiethandi.me%20contact%20form">Send an email</a>
+        <br> <br>
+        <!--Github issues link-->
+        <a href="https://github.com/rthandi/rthandi.github.io/issues">Create an issue on github</a>
+    </main>
+
 </body>
