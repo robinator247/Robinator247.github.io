@@ -43,18 +43,46 @@ function fillImageSet (inputSubredditArray) {
 }
 
 var subredditArray = [];
+var mainArray = ['aww', 'animalphotos', 'awww', 'dogpictures', 'lookatmydog', 'puppies', 'alpaca', 'AlpacaSelfies', 'babyelephants', 'babyhippos', 'Meerkats'];
 
-if (window.location.pathname === "/happy_place/mixture.html"){
-    subredditArray = ['aww', 'animalphotos', 'awww'];
-} else if (window.location.pathname === "/happy_place/dogs.html"){
-    subredditArray = ['dogpictures', 'lookatmydog', 'puppies'];
-} else if (window.location.pathname === "/happy_place/alpacas.html"){
-    subredditArray = ['alpaca', 'AlpacaSelfies'];
-} else if (window.location.pathname === "/happy_place/elephants.html"){
-    subredditArray = ['babyelephants'];
-} else if (window.location.pathname === "/happy_place/hippos.html"){
-    subredditArray = ['babyhippos'];
-} else if (window.location.pathname === "/happy_place/meerkats.html"){
-    subredditArray = ['Meerkats'];
+// if (window.location.pathname === "/happy_place/mixture.html"){
+//     subredditArray = ['aww', 'animalphotos', 'awww'];
+// } else if (window.location.pathname === "/happy_place/dogs.html"){
+//     subredditArray = ['dogpictures', 'lookatmydog', 'puppies'];
+// } else if (window.location.pathname === "/happy_place/alpacas.html"){
+//     subredditArray = ['alpaca', 'AlpacaSelfies'];
+// } else if (window.location.pathname === "/happy_place/elephants.html"){
+//     subredditArray = ['babyelephants'];
+// } else if (window.location.pathname === "/happy_place/hippos.html"){
+//     subredditArray = ['babyhippos'];
+// } else if (window.location.pathname === "/happy_place/meerkats.html"){
+//     subredditArray = ['Meerkats'];
+// }
+
+switch (window.location.pathname) {
+    case "/happy_place/mixture.html":
+        subredditArray = ['aww', 'animalphotos', 'awww'];
+        break;
+    case "/happy_place/dogs.html":
+        subredditArray = ['dogpictures', 'lookatmydog', 'puppies'];
+        break;
+    case "/happy_place/alpacas.html":
+        subredditArray = ['alpaca', 'AlpacaSelfies'];
+        break;
+    case "/happy_place/elephants.html":
+        subredditArray = ['babyelephants'];
+        break;
+    case "/happy_place/hippos.html":
+        subredditArray = ['babyhippos'];
+        break;
+    case "/happy_place/meerkats.html":
+        subredditArray = ['Meerkats'];
+        break;
+    case "/happy_place/random.html":
+        var randNum = Math.floor(Math.random() * mainArray.length - 1) + 1;
+        subredditArray[0] = mainArray[randNum];
+    default:
+        subredditArray = subredditArray = ['aww', 'animalphotos', 'awww'];
+        break;
 }
 fillImageSet(subredditArray);
