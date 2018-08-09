@@ -45,20 +45,6 @@ function fillImageSet (inputSubredditArray) {
 var subredditArray = [];
 var mainArray = ['aww', 'animalphotos', 'awww', 'dogpictures', 'lookatmydog', 'puppies', 'alpaca', 'AlpacaSelfies', 'babyelephants', 'babyhippos', 'Meerkats'];
 
-// if (window.location.pathname === "/happy_place/mixture.html"){
-//     subredditArray = ['aww', 'animalphotos', 'awww'];
-// } else if (window.location.pathname === "/happy_place/dogs.html"){
-//     subredditArray = ['dogpictures', 'lookatmydog', 'puppies'];
-// } else if (window.location.pathname === "/happy_place/alpacas.html"){
-//     subredditArray = ['alpaca', 'AlpacaSelfies'];
-// } else if (window.location.pathname === "/happy_place/elephants.html"){
-//     subredditArray = ['babyelephants'];
-// } else if (window.location.pathname === "/happy_place/hippos.html"){
-//     subredditArray = ['babyhippos'];
-// } else if (window.location.pathname === "/happy_place/meerkats.html"){
-//     subredditArray = ['Meerkats'];
-// }
-
 switch (window.location.pathname) {
     case "/happy_place/mixture.html":
         subredditArray = ['aww', 'animalphotos', 'awww'];
@@ -81,8 +67,19 @@ switch (window.location.pathname) {
     case "/happy_place/random.html":
         var randNum = Math.floor(Math.random() * mainArray.length - 1) + 1;
         subredditArray[0] = mainArray[randNum];
+        break;
+    case "/happy_place/custom.html":
+        subredditArray = [customReddit()];
+        break;
     default:
         subredditArray = subredditArray = ['aww', 'animalphotos', 'awww'];
         break;
 }
+
+function customReddit () {
+    var chosenSubreddit = prompt("Choose the subreddit you would like to view");
+    // TODO: add validation here
+    return chosenSubreddit;
+}
+
 fillImageSet(subredditArray);
