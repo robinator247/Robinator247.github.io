@@ -12,7 +12,7 @@ function fillImageSet (inputSubredditArray) {
         //anonymous function
         (function (e) {
             //Fetch data from reddit
-            reddit.hot(inputSubredditArray[e]).limit(LIMIT).fetch(function(res) {
+            if (reddit.hot(inputSubredditArray[e]).limit(LIMIT).fetch()) {
                 for (j=0; j<LIMIT - 1; j++){
                     //Check that it is a link post
                     if (!(res.data.children[j].data.url === undefined)){
@@ -37,7 +37,10 @@ function fillImageSet (inputSubredditArray) {
                         }
                     }
                 }
-            })
+            }
+            else {
+                window.alert("ljnfljdsgfnjldsfnjdsflnsdlkfnsdlnflnkdsfnlksdflknsdfnlksdlknfslkdnflkndsflkn")
+            }
         }(i));
     }
 }
@@ -68,7 +71,8 @@ switch (window.location.pathname) {
         var randNum = Math.floor(Math.random() * mainArray.length - 1) + 1;
         subredditArray[0] = mainArray[randNum];
         break;
-    case "/happy_place/custom.html":
+    // case "/happy_place/custom.html":
+    case "/home/robbie/Documents/work/rthandi.github.io/happy_place/custom.html":
         subredditArray = [customReddit()];
         break;
     default:
