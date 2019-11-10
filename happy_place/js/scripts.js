@@ -39,7 +39,7 @@ function fillImageSet (inputSubredditArray) {
                 }
             }
             else {
-                window.alert("ljnfljdsgfnjldsfnjdsflnsdlkfnsdlnflnkdsfnlksdflknsdfnlksdlknfslkdnflkndsflkn")
+                window.alert("This site is broken at the moment. Will fix soon, sorry")
             }
         }(i));
     }
