@@ -12,7 +12,7 @@ function fillImageSet (inputSubredditArray) {
         //anonymous function
         (function (e) {
             //Fetch data from reddit
-            if (reddit.hot(inputSubredditArray[e]).limit(LIMIT).fetch()) {
+            reddit.hot(inputSubredditArray[e]).limit(LIMIT).fetch(function(res) {
                 for (j=0; j<LIMIT - 1; j++){
                     //Check that it is a link post
                     if (!(res.data.children[j].data.url === undefined)){
@@ -37,9 +37,6 @@ function fillImageSet (inputSubredditArray) {
                         }
                     }
                 }
-            }
-            else {
-                window.alert("This site is broken at the moment. Will fix soon, sorry")
             }
         }(i));
     }
