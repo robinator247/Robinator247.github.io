@@ -37,7 +37,7 @@ function fillImageSet (inputSubredditArray) {
                         }
                     }
                 }
-            }
+            })
         }(i));
     }
 }
